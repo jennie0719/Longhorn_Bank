@@ -1,0 +1,44 @@
+@model Team3_FinalProject.Models.Dispute
+
+@{
+    ViewData["Title"] = "Dispute";
+}
+
+<h1>File Dispute</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(model => model.Transaction.TransactionID)
+            <div class="form-group">
+                <label asp-for="Transaction.TransactionID" class="control-label"></label>
+                @Html.DisplayFor(Model => Model.Transaction.TransactionID, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label asp-for="DisputeComment" class="control-label"></label>
+                <input asp-for="DisputeComment" class="form-control" />
+                <span asp-validation-for="DisputeComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CorrectAmount" class="control-label"></label>
+                <input asp-for="CorrectAmount" type="number" class="form-control" />
+                <span asp-validation-for="CorrectAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="DeleteTransaction" /> @Html.DisplayNameFor(model => model.DeleteTransaction)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="File" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Transactions" asp-action="Details" asp-route-id="@Model?.Transaction.TransactionID">Back to Transaction</a>
+</div>
+

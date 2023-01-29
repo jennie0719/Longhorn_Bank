@@ -1,0 +1,52 @@
+@model IEnumerable<Team3_FinalProject.Models.Stock>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StockName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TickerSymbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StockName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TickerSymbol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StockPrice)
+                </td>
+                <td>
+
+                    <a asp-action="Details" asp-route-id="@item.StockID">Details</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

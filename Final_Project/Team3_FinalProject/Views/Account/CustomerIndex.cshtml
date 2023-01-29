@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Team3_FinalProject.Models.AppUser>
+
+@{
+    ViewBag.Title = "Customers";
+}
+
+<h2>All Customers</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+            <th>
+                Profile Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @if (item.MI != null)
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.MI). @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address), @Html.DisplayFor(modelItem => item.City), @Html.DisplayFor(modelItem => item.State) @Html.DisplayFor(modelItem => item.ZipCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DOB)
+                </td>
+                @if (item.Disabled)
+                {
+                    <td>Disabled</td>
+                }
+                else
+                {
+                    <td>Enabled</td>
+                }
+                <td>
+                    <a asp-action="StaffModify" asp-route-id="@item.Id">Modify</a> |
+                    <a asp-action="Disable" asp-route-id="@item.Id">Disable</a>
+                </td>
+                
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="StaffHome" asp-controller="Home">Back</a>
+</div>

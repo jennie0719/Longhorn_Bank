@@ -1,0 +1,99 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Longhorn Bank & Trust</title>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-content">
+                <ul class="navbar-nav mr-auto">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @if (User.IsInRole("Customer"))
+                        {
+
+
+                            <li>
+                                <a asp-controller="Accounts" asp-action="Index" class="nav-link">Accounts</a>
+                            </li>
+                            <li>
+                                <a asp-controller="StockPortfolios" asp-action="Index" class="nav-link">Stock Portfolio</a>
+                            </li>
+
+
+                        }
+                        @if (User.IsInRole("Employee"))
+                        {
+                            <li>
+                                <a asp-controller="Home" asp-action="StaffHome" class="nav-link">Home</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Accounts" asp-action="Index" class="nav-link">View Accounts</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Transactions" asp-action="Index" class="nav-link">All Transactions</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Account" asp-action="CustomerIndex" class="nav-link">Manage Customers</a>
+                            </li>
+
+                        }
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>
+                                <a asp-controller="Home" asp-action="StaffHome" class="nav-link">Home</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Accounts" asp-action="Index" class="nav-link">View Accounts</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Transactions" asp-action="Index" class="nav-link">All Transactions</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Account" asp-action="CustomerIndex" class="nav-link">Manage Customers</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Account" asp-action="EmployeeIndex" class="nav-link">Manage Employees</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Disputes" asp-action="Index" class="nav-link">Disputes</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Stocks" asp-action="Create" class="nav-link">Create Stocks</a>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            @await Html.PartialAsync("_LoginPartial")
+        </nav>
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/popper.js/popper.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+</body>
+</html>

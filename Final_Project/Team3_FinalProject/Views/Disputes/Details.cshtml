@@ -1,0 +1,62 @@
+@model Team3_FinalProject.Models.Dispute
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Dispute Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DisputeID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DisputeID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DisputeStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DisputeStatus)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DisputeComment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DisputeComment)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdminComment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdminComment)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CorrectAmount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CorrectAmount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeleteTransaction)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeleteTransaction)
+        </dd>
+    </dl>
+</div>
+@if (User.IsInRole("Admin"))
+{
+    <div>
+        <a asp-action="Resolve" asp-route-id="@Model?.DisputeID">Resolve</a> |
+        <a asp-action="Index" asp-route-SearchStatus="@Status.Submitted">Back to List</a>
+    </div> }
+else
+{
+    <div>
+        <a asp-action="Details" asp-controller="Transactions" asp-route-id="@Model?.Transaction.TransactionID">Back to Transaction</a>
+    </div>
+}
+

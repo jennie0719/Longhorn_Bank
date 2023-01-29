@@ -1,0 +1,91 @@
+@model IEnumerable<Team3_FinalProject.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Apply">Apply a new account</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountNo4Digits)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Balance)
+                </td>
+                @if (item.Active)
+                {
+                    <td>Active</td>
+                }
+                else
+                {
+                    <td>Inactive</td>
+                }
+
+                @if (User.IsInRole("Customer"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.AccountID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.AccountID">Details</a>
+                    </td>
+                }
+                @if (User.IsInRole("Employee"))
+                {
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.AccountID">Details</a>
+                    </td>
+                }
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.AccountID">Details</a> |
+                        <a asp-action="Inactivate" asp-route-id="@item.AccountID">Inactivate</a>
+                    </td>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (User.IsInRole("Customer"))
+{
+    <div>
+        <a asp-action="Transact" asp-controller="Transactions">Transact</a> |
+        <a asp-action="Transfer" asp-controller="Transactions">Transfer</a>
+    </div>
+}
+

@@ -1,0 +1,248 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Team3_FinalProject
+build_property.RootNamespace = Team3_FinalProject
+build_property.ProjectDir = /Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9DaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/CustomerIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9DdXN0b21lckluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/Disable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9EaXNhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9FZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/EmployeeIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9FbXBsb3llZUluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/RegisterEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3RlckVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Account/StaffModify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9TdGFmZk1vZGlmeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Accounts/Apply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudHMvQXBwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Accounts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudHMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Accounts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Accounts/Inactivate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudHMvSW5hY3RpdmF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Accounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Disputes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzcHV0ZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Disputes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzcHV0ZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Disputes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzcHV0ZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Disputes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzcHV0ZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Disputes/Resolve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzcHV0ZXMvUmVzb2x2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Home/StaffHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TdGFmZkhvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Seed/Confirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VlZC9Db25maXJtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Seed/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VlZC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockPortfolios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tQb3J0Zm9saW9zL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockPortfolios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tQb3J0Zm9saW9zL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockPortfolios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tQb3J0Zm9saW9zL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockPortfolios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tQb3J0Zm9saW9zL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockPortfolios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tQb3J0Zm9saW9zL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Stocks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Stocks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Stocks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Stocks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Stocks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTransactions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUcmFuc2FjdGlvbnMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTransactions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUcmFuc2FjdGlvbnMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTransactions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUcmFuc2FjdGlvbnMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTransactions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUcmFuc2FjdGlvbnMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTransactions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUcmFuc2FjdGlvbnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUeXBlcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUeXBlcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUeXBlcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUeXBlcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/StockTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvY2tUeXBlcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Transactions/Approve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL0FwcHJvdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Transactions/DetailedSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL0RldGFpbGVkU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Transactions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Transactions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Transactions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Transactions/Transact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL1RyYW5zYWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Transactions/Transfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL1RyYW5zZmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/Transactions/TransferConfirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL1RyYW5zZmVyQ29uZmlybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jennie/Desktop/MIS333K/fa22Team03FinalProject/Team3_FinalProject/Team3_FinalProject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

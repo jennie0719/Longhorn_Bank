@@ -1,0 +1,112 @@
+@model Team3_FinalProject.Models.Account
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Account Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountName)
+        </dd>
+        <dt class="col-sm-2">
+            Available Balance
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+        @if (Model.AccountType == AccountType.IRA)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Contribution)
+            </dt>
+            <dd class="col-sm-10">
+                $@Html.DisplayFor(model => model.Contribution) / $5000.00
+            </dd>
+        }
+    </dl>
+    @if (User.IsInRole("Customer"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.AccountID">Edit</a>
+    }
+</div>
+
+<h5>All Transactions</h5>
+<table class="table table-primary">
+    <tr>
+        <th>Transaction No.</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Amount</th>
+    </tr>
+    @foreach (Transaction txn in Model.Transactions)
+    {
+        <tr>
+            <td>@Html.DisplayFor(ModelItem => txn.TransactionNumber)</td>
+            <td>@Html.DisplayFor(ModelItem => txn.TransactionDate)</td>
+            <td>@Html.DisplayFor(ModelItem => txn.TransactionType)</td>
+            <td>@Html.DisplayFor(ModelItem => txn.TransactionDescription)</td>
+            @if (!txn.Approved || txn.Disputes.Count() != 0)
+            {
+                if (!txn.Approved)
+                {
+
+
+                    <td>Pending</td>
+ }
+                else
+                {
+                    <td>Disputed</td>
+                }
+
+            }
+            else
+            {
+                <td></td>
+            }
+
+            <td>@Html.DisplayFor(ModelItem => txn.TransactionAmount)</td>
+        </tr>
+    }
+</table>
+@if (User.IsInRole("Customer"))
+{
+    <div>
+        <a asp-controller="Transactions" asp-action="Index" asp-route-accountID="@Model?.AccountID">All Transactions</a> |
+        <a asp-action="Index">All Accounts</a>
+    </div>
+}
+@if (User.IsInRole("Employee"))
+{
+    <div>
+        <a asp-action="Index">All Accounts</a>
+    </div>
+}
+@if (User.IsInRole("Admin"))
+{
+    <div>
+        <a asp-action="Inactivate" asp-route-id="@Model?.AccountID">Activate/Inactivate</a> |
+        <a asp-action="Index">All Accounts</a>
+    </div>
+}
+

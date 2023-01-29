@@ -1,0 +1,60 @@
+@model Team3_FinalProject.Models.StockPortfolio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>StockPortfolio</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AccountName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CashValuePortion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CashValuePortion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StockPortion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StockPortion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bonus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bonus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Balanced)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Balanced)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Approved)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Approved)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.StockPortfolioID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

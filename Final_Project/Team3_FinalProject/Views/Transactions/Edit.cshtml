@@ -1,0 +1,45 @@
+@model Team3_FinalProject.Models.Transaction
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Transaction</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TransactionID" />
+            <div class="form-group">
+                <label asp-for="TransactionAmount" class="control-label"></label>
+                @Html.DisplayFor(Model => Model.TransactionAmount, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionType" class="control-label"></label>
+                @Html.DisplayFor(Model => Model.TransactionType, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionDescription" class="control-label"></label>
+                @Html.DisplayFor(Model => Model.TransactionDescription, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionDate" class="control-label"></label>
+                <input asp-for="TransactionDate" type="date" class="form-control" />
+                <span asp-validation-for="TransactionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionComment" class="control-label"></label>
+                <input asp-for="TransactionComment" class="form-control" />
+                <span asp-validation-for="TransactionComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Details" asp-route-id="@Model?.TransactionID">Back to Transactions</a>
+</div>

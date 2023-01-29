@@ -1,0 +1,55 @@
+@model TransferViewModel
+
+@{
+    ViewData["Title"] = "Transfer";
+}
+
+<h1>Transfer</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Transfer">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FromAccount" class="control-label"></label>
+                @Html.DropDownListFor(model => model.FromAccount, (SelectList)ViewBag.AllAccounts, new { @class = "form-control" })
+                <span asp-validation-for="FromAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToAccount" class="control-label"></label>
+                @Html.DropDownListFor(model => model.ToAccount, (SelectList)ViewBag.AllAccounts, new { @class = "form-control" })
+                <span asp-validation-for="ToAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransferDate" class="control-label"></label>
+                <input asp-for="TransferDate" type="date" min="@DateTime.Now" class="form-control" />
+                <span asp-validation-for="TransferDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransferAmount" class="control-label"></label>
+                <input asp-for="TransferAmount" type="number" class="form-control" />
+                <span asp-validation-for="TransferAmount" class="text-danger"></span>
+            </div>
+            <p>@ViewBag.AmountNotification</p>
+            @if (Model != null && Model.TransferFromIRA)
+            {
+                @Html.HiddenFor(model => model.TransferFromIRA)
+                <div class="form-group">
+                    <label asp-for="IRATransferFeeType" class="control-label"></label>
+                    <input type="radio" class="radio" asp-for="IRATransferFeeType" value="@TransferFeeType.Add" checked="checked" />Add
+                    <input type="radio" class="radio" asp-for="IRATransferFeeType" value="@TransferFeeType.Include" />Include<br />
+                    <span asp-validation-for="IRATransferFeeType" class="text-danger"></span>
+                </div>
+            }
+
+            <div class="form-group">
+                <input type="submit" value="Transfer" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Accounts">Back to All Accounts</a>
+</div>

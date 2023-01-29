@@ -1,0 +1,63 @@
+@model Team3_FinalProject.Models.StockPortfolio
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>StockPortfolio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AccountName" class="control-label"></label>
+                <input asp-for="AccountName" class="form-control" />
+                <span asp-validation-for="AccountName" class="text-danger"></span>
+            </div>
+            <!--
+                <div class="form-group">
+                    <label asp-for="CashValuePortion" class="control-label"></label>
+                    <input asp-for="CashValuePortion" class="form-control" />
+                    <span asp-validation-for="CashValuePortion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StockPortion" class="control-label"></label>
+                    <input asp-for="StockPortion" class="form-control" />
+                    <span asp-validation-for="StockPortion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TotalValue" class="control-label"></label>
+                    <input asp-for="TotalValue" class="form-control" />
+                    <span asp-validation-for="TotalValue" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Bonus" class="control-label"></label>
+                    <input asp-for="Bonus" class="form-control" />
+                    <span asp-validation-for="Bonus" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Balanced" /> @Html.DisplayNameFor(model => model.Balanced)
+                    </label>
+                </div>
+                -->
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Approved" /> @Html.DisplayNameFor(model => model.Approved)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+      
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

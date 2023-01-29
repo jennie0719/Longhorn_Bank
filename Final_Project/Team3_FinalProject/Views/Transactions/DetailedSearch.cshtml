@@ -1,0 +1,70 @@
+@model Team3_FinalProject.Models.SearchViewModel
+
+@{
+    ViewData["Title"] = "Detailed Search";
+}
+
+<h1>Detailed Transaction Search</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DisplaySearchResults" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SelectedAccount" value="@ViewBag.DetailedSearchAccount"/>
+            <div class="form-group">
+                <label asp-for="SearchDescription" class="control-label"></label>
+                <input asp-for="SearchDescription" class="form-control" />
+                <span asp-validation-for="SearchDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchTransactionType" class="control-label"></label>
+                <select asp-for="SearchTransactionType" asp-items="Html.GetEnumSelectList<TransactionType>()" class="form-control">
+                    <option selected="selected" value="">All Transaction Types</option>
+                </select>
+                <span asp-validation-for="SearchTransactionType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchMinAmount" class="control-label"></label>
+                <input asp-for="SearchMinAmount" type="number" step="100" class="form-control" />
+                <span asp-validation-for="SearchMinAmount" class="text-danger"></span>
+                <label class="control-label"> - </label>
+                <input asp-for="SearchMaxAmount" type="number" step="100" class="form-control" />
+                <span asp-validation-for="SearchMaxAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchTransactionNumber" class="control-label"></label>
+                <input asp-for="SearchTransactionNumber" type="number" class="form-control" />
+                <span asp-validation-for="SearchTransactionNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchMinDate" class="control-label"></label>
+                <input asp-for="SearchMinDate" class="form-control" />
+                <span asp-validation-for="SearchMinDate" class="text-danger"></span>
+                <label class="control-label"> - </label>
+                <input asp-for="SearchMaxDate" class="form-control" />
+                <span asp-validation-for="SearchMaxDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchSortBy" class="control-label"></label>
+                <select asp-for="SearchSortBy" asp-items="Html.GetEnumSelectList<SortBy>()" class="form-control"></select>
+                <span asp-validation-for="SearchSortBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchSortOrder" class="control-label"></label>
+                <input type="radio" class="radio" asp-for="SearchSortOrder" value="@SortOrder.Ascending" checked="checked" />Ascending
+                <input type="radio" class="radio" asp-for="SearchSortOrder" value="@SortOrder.Descending" />Descending<br />
+                <span asp-validation-for="SearchSortOrder" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-route-accountID="@ViewBag.DetailedSearchAccount">Back to All Transactions</a>
+</div>
+

@@ -1,0 +1,59 @@
+@model IEnumerable<Team3_FinalProject.Models.StockTransaction>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityShares)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SharePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockTXNAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockTXNDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityShares)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SharePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockTXNAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockTXNDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StockTransactionID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StockTransactionID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StockTransactionID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

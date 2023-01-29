@@ -1,0 +1,128 @@
+@model Team3_FinalProject.Models.Transaction
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Transaction Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TransactionNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionAmount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TransactionAmount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TransactionDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TransactionType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TransactionDescription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Account.AccountNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.AccountNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Account.AccountName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.AccountName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionComment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TransactionComment)
+        </dd>
+        @if (!Model.Approved)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Approved)
+            </dt>
+            <dd class="col-sm-10">
+                @ViewBag.CurrentStatus
+            </dd>
+        }
+        @if (Model.Disputes.Count() != 0)
+        {
+            <dt class="col-sm-2">Dispute Status</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Disputes.Last().DisputeStatus)
+            </dd>
+        }
+
+    </dl>
+</div>
+@if (Model.Disputes.Count() != 0)
+{
+    <h5>All Disputes</h5>
+    <table class="table table-primary">
+        <tr>
+            <th>Dispute ID</th>
+            <th>Corrected Amount</th>
+            <th>Comment</th>
+            <th>Delete?</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+        @foreach (Dispute dispute in Model.Disputes)
+        {
+            <tr>
+                <td>@Html.DisplayFor(ModelItem => dispute.DisputeID)</td>
+                <td>@Html.DisplayFor(ModelItem => dispute.CorrectAmount)</td>
+                <td>@Html.DisplayFor(ModelItem => dispute.DisputeComment) / @Html.DisplayFor(ModelItem => dispute.AdminComment)</td>
+                <td>@Html.DisplayFor(ModelItem => dispute.DeleteTransaction)</td>
+                <td>@Html.DisplayFor(ModelItem => dispute.DisputeStatus)</td>
+                <td>
+                    <a asp-controller="Disputes" asp-action="Details" asp-route-id="@dispute.DisputeID">Details</a>
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+
+@if (User.IsInRole("Customer"))
+{
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.TransactionID">Edit</a> |
+        <a asp-controller="Disputes" asp-action="Create" asp-route-transactionID="@Model?.TransactionID">Dispute</a> |
+        <a asp-action="Index" asp-route-accountID="@Model?.Account.AccountID">Back to All Transactions</a>
+    </div>
+}
+@if (User.IsInRole("Employee") || (User.IsInRole("Admin") && Model.Approved))
+{
+    <div>
+        <a asp-action="Index">Back to All Transactions</a>
+    </div>
+}
+@if (User.IsInRole("Admin") && !Model.Approved)
+{
+    <div>
+        <a asp-controller="Transactions" asp-action="Approve" asp-route-id="@Model?.TransactionID">Approve</a> |
+        <a asp-action="Index">Back to All Transactions</a>
+    </div>
+}

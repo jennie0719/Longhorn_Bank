@@ -1,0 +1,87 @@
+@model IEnumerable<Team3_FinalProject.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<h1>All Transactions</h1>
+@if (User.IsInRole("Customer"))
+{
+    <form asp-action="Index" asp-controller="Transactions" method="get">
+        <p class="form-group">
+            Search: <input name="SearchString" class="form-control" /><br />
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a asp-action="DetailedSearch" asp-route-accountID="@ViewBag.SelectedAccount" class="btn btn-success">Detailed Search</a>
+            <a asp-action="Index" class="btn btn-danger" asp-route-accountID="@ViewBag.SelectedAccount">Show All</a>
+            <a asp-action="Details" asp-controller="Accounts" asp-route-id="@ViewBag.SelectedAccount">Back</a>
+        </p>
+    </form>
+}
+else
+{
+    <form asp-action="Index" asp-controller="Transactions" method="get">
+        <p class="form-group">
+            Search: <input name="SearchString" class="form-control" /><br />
+
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a asp-action="DetailedSearch" class="btn btn-success">Detailed Search</a>
+            <a asp-action="Index" class="btn btn-danger">Show All</a>
+            <a asp-action="StaffHome" asp-controller="Home">Back</a>
+        </p>
+    </form>
+}
+
+<p>Displaying @ViewBag.SelectedTransactions of @ViewBag.AllTransactions Transactions</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionAmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionAmount)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.TransactionID">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if (User.IsInRole("Customer"))
+{
+    <div>
+
+    </div>
+}

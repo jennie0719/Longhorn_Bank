@@ -1,0 +1,18 @@
+@{
+    ViewBag.Title = "Staff";
+}
+
+<h1>Staff Homepage</h1>
+
+<hr />
+
+<a asp-action="Index" asp-controller="Accounts" class="btn btn-info">View Accounts</a>
+<a asp-action="Index" asp-controller="Transactions" class="btn btn-info">View Transactions</a>
+<a asp-action="CustomerIndex" asp-controller="Account" class="btn btn-info">All Customers</a>
+
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="EmployeeIndex" asp-controller="Account" class="btn btn-info">All Employees</a>
+    <a asp-action="Index" asp-controller="Disputes" asp-route-SearchStatus="@Status.Submitted" class="btn btn-info">View Pending Disputes</a>
+    <a asp-action="Create" asp-controller="Stocks" class="btn btn-info">Create Stocks</a>
+}

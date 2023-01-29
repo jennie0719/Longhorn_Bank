@@ -1,0 +1,46 @@
+@model TransferViewModel
+
+@{
+    ViewData["Title"] = "Transfer";
+}
+
+<h1>Confirm Transfer</h1>
+
+<h3>Are you sure you want to transfer?</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="TransferConfirm" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(model => model.ToAccount)
+            @Html.HiddenFor(model => model.FromAccount)
+            @Html.HiddenFor(model => model.TransferAmount)
+            @Html.HiddenFor(model => model.TransferDate)
+            @Html.HiddenFor(model => model.IRATransferFeeType)
+            @Html.HiddenFor(model => model.TransferFromIRA)
+            <div class="form-group">
+                <b><label asp-for="FromAccount" class="control-label"></label></b>
+                @ViewBag.FromAccount
+            </div>
+            <div class="form-group">
+                <b><label asp-for="ToAccount" class="control-label"></label></b>
+                @ViewBag.ToAccount
+            </div>
+            <div class="form-group">
+                <b><label asp-for="TransferDate" class="control-label"></label></b>
+                @Html.DisplayFor(Model => Model.TransferDate, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <b><label asp-for="TransferAmount" class="control-label"></label></b>
+                $@Html.DisplayFor(Model => Model.TransferAmount, new { @class = "form-control" })
+            </div>
+
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Confirm" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<a asp-action="Index" asp-controller="Accounts">Cancel</a>

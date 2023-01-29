@@ -1,0 +1,69 @@
+@model Team3_FinalProject.Models.Dispute
+
+@{
+    ViewData["Title"] = "Resolve";
+}
+
+<h1>Resolve Dispute</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Resolve">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DisputeID" />
+            @Html.HiddenFor(model => model.DisputeComment)
+            <div class="form-group">
+                <label asp-for="DisputeComment" class="control-label"></label>
+                @Html.DisplayFor(Model => Model.DisputeComment, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label class="control-label">Original Amount</label>
+                $@ViewBag.OriginalAmount
+            </div>
+            <div class="form-group">
+                <label asp-for="CorrectAmount" class="control-label"></label>
+                @Html.DisplayFor(Model => Model.CorrectAmount, new { @class = "form-control" })
+            </div>
+            @if (Model.DeleteTransaction)
+            {
+                <div class="form-group">
+                    <label class="control-label">Delete this transaction</label>
+                </div>
+            }
+            <div class="form-group">
+                <label asp-for="AdminComment" class="control-label"></label>
+                <input asp-for="AdminComment" class="form-control" />
+                <span asp-validation-for="AdminComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Approve?</label>
+                <select asp-for="DisputeStatus" asp-items="Html.GetEnumSelectList<Status>()" class="form-control"></select>
+                <span asp-validation-for="DisputeStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Adjust amount to</label>
+                <input asp-for="CorrectAmount" class="form-control" />
+                <span asp-validation-for="CorrectAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Resolve" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (Model.DeleteTransaction)
+{
+    <div>
+        <a asp-action="Delete" asp-route-id="@Model?.DisputeID">Delete Dispute</a>
+        <a asp-action="Details" asp-route-id="@Model?.DisputeID">Dispute Details</a>
+    </div>
+}
+else
+{
+    <div>
+        <a asp-action="Details" asp-route-id="@Model?.DisputeID">Dispute Details</a>
+    </div>
+}
+

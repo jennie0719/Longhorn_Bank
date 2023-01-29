@@ -1,0 +1,70 @@
+@model IEnumerable<Team3_FinalProject.Models.StockPortfolio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashValuePortion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockPortion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bonus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balanced)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Approved)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashValuePortion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockPortion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bonus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Balanced)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Approved)
+            </td>
+            <td>
+
+                <a asp-action="Details" asp-route-id="@item.StockPortfolioID">Details</a>
+                <a asp-action="Index" asp-controller="StockTransactions" class="btn btn-info">Stock Transaction</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+@model Team3_FinalProject.Models.Account
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Account</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AccountID" />
+            <div class="form-group">
+                <label asp-for="AccountName" class="control-label"></label>
+                <input asp-for="AccountName" class="form-control" />
+                <span asp-validation-for="AccountName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Details" asp-route-id="@Model?.AccountID">Account Details</a>
+</div>

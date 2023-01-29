@@ -1,0 +1,8 @@
+<ListOfTaskListEntry>
+  <TaskListEntry file="" description="everyone should only have one role!!! No duplication!!!" />
+  <TaskListEntry file="" description="AccountController : [Post] Login -&gt; direct to different home page of users" />
+  <TaskListEntry file="" description="AccountViewModels : add StaffModifyViewModel -&gt; add name, address, phone, password" />
+  <TaskListEntry file="" description="Account/StaffModify : name, address, phone, password" />
+  <TaskListEntry file="" description="Trnasactions/Confirm : confirm btn, cancel btn" />
+  <TaskListEntry file="" description="Error.cshtml : change take me home's action" />
+</ListOfTaskListEntry>

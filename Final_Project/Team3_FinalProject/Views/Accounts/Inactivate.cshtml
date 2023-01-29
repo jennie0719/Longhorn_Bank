@@ -1,0 +1,50 @@
+@model Team3_FinalProject.Models.Account
+
+@{
+    ViewData["Title"] = "Change Status";
+}
+
+<h1>Change Status</h1>
+
+<h3>Are you sure you want to @ViewBag.StatusChanged this account?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountNo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AccountNo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AccountType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AppUser.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AppUser.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+        <dt class = "col-sm-2">
+            Current Status
+        </dt>
+        <dd class="col-sm-10">
+            @ViewBag.CurrentStatus
+        </dd>
+    </dl>
+    
+    <form asp-action="Inactivate">
+        <input type="hidden" asp-for="AccountID" />
+        <input type="submit" value="@ViewBag.StatusChanged" class="btn btn-danger" /> |
+        <a asp-action="Details" asp-route-id="@Model.AccountID">Account Details</a>
+    </form>
+</div>
